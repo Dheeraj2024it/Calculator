@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Calculator</title> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAB/CAMAAADxY+0hAAAAolBMVEX6mAv////l5eXW1tba2trh4eHe3t76lwD98OX+9Ov6mib5mR/OfQn+mgvujwDtkArhiQrihgDUsZTo6+12dnb4p1T7jgDxhwD5nBP37+P6kgCSkpK+vr7Kj1H3voL30Kf29vbuo1v++vXtr27vvYr4uXf738P8p0f6nzjtkyfQhCf5qk/6yZf959L6r1v6tGrbkD7GgjKlpaXw0K/t3s7w2cKEDuyXAAADpUlEQVRoge3bbVfaMBQH8ASBCEj34Kwax4PFUhwU5pDv/9VWSZ1r770kN2g9c/m/GZ718EvSm7Y2Ucj3jQh+8IMffDy9o+Pt9+bjbNG35P6H7YjFcpUfaATl52lfa2VNdDa0HqP1YnzK8/OLWCvhkE9nQ4ejiiakxBhgfpLGTrizX0THE1c/X2hHneEXLVhjQwD9uXDtPM8XOkOqAPi524n38IXqwxGo+7ni8DxfqIXNTxYsnukLvbH4qXvp+fhC12dB1c+ZPNsHJVD1M97o832h7w7485jJ832lerSfcrvP9+sV8LefsHkPX2Wkzx9+D1/ECeWP8eov7l7kNdHHn1P+GlXUcrVabYgGePh6RfgJPvv0uPi/CXFh8PBVSvi9fjP+mvBPB834F8F388vHV+ObH+w+fP719dXVPmrvlz/Y/SsYTz+Gj2u9+hDV/eqXm9TOnbufg68Cp+gj+3p+vc/TDTsxH3Orv7wGufP0xaXJ0/VyUn6uFzOoP3UJUpu63Pmv/tvrT/CD//RL4+3tLfVrYQO+QG98DfqHEvzgBz/4wf8Q/pCbwueG9u8/83P2hZ2f01f0H77yQ/kD9lgOo9E5P69Yf4XfYif4wQ9+8IP/EfwON/+Ur5BPDfo6e37xoZfYK5C39ZWeJGvD6hR9B4P5rU5ZZ+bfY/yJlKYB+4XzFWwA8Fs3IL9anr5ZKUqKgddmzQi+BYL+N5AbX9+8+pIyi82S2Qztf7cS1K8e0nWvP9OAZJUQvJff4dT/y3I9xkO/+x2m4++/NADlER+ZcPUjOL4o9y3d4Wvj0LeH1/+0XC5fE/2vF5e9/4z6e+FlgjYA+B37+efUv9mvsyUbEI3qxYXUv7dfXnZmsSnCDJv/nXYlqF89xNkvV8qLyo9n+0/Y9a/+5a/pD3aynHj7abiN7P3vItf/rpsP9x8osXveFFI0YBvB+gS+Q0gfDq+KNn/u/xuE9/Kp+Y/uP7E+//B96v5H7b85FB+fev8h5434J1PK7zXTf0n5csZ+APfwW7SfszeA8f3q8B+7/zAade1kJZXZV/fZFRiN2ie8TA/5csNsQNF/Hl89+0fvv+X6bXnYl4+s7c9sf2rz5Y7VAKYPeGT/+ZbTAJ5/DjBs//3jwL0IWfUPe0/9/YHzEDD8LsYTf3+xyxxb4Oy3kbGnfTndXQjtsBXf0W/Xp73NL3I9mS10bMnlg91vt9CRt/n7YfBYXalmesC2+2+f4Ac/+MEP/vvkN/d7wQOM3wELAAAAAElFTkSuQmCC"
+        type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="center">
+        <form name="forms">
+            <input type="text" id="display" name="display" disabled>
+            <div class="buttons">
+                <input type="button" id="seven" value="7">
+                <input type="button" id="eight" value="8">
+                <input type="button" id="nine" value="9">
+                <input type="button" id="divide" value="/"><br>
+                <input type="button" id="four" value="4">
+                <input type="button" id="five" value="5">
+                <input type="button" id="six" value="6">
+                <input type="button" id="multi" value="*"><br>
+                <input type="button" id="one" value="1">
+                <input type="button" id="two" value="2">
+                <input type="button" id="three" value="3">
+                <input type="button" id="subs" value="-"><br>
+                <input type="button" id="dot" value=".">
+                <input type="button" id="zero" value="0">
+                <input type="button" id="add" value="+">
+                <input type="button" id="clear" value="C"><br>
+                <input type="button" id="equal" value="=">
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#one').click(function() {
+                document.forms.display.value += 1;
+            });
+            $('#two').click(function() {
+                document.forms.display.value += 2;
+            });
+            $('#three').click(function() {
+                document.forms.display.value += 3;
+            });
+            $('#four').click(function() {
+                document.forms.display.value += 4;
+            });
+            $('#five').click(function() {
+                document.forms.display.value += 5;
+            });
+            $('#six').click(function() {
+                document.forms.display.value += 6;
+            });
+            $('#seven').click(function() {
+                document.forms.display.value += 7;
+            });
+            $('#eight').click(function() {
+                document.forms.display.value += 8;
+            });
+            $('#nine').click(function() {
+                document.forms.display.value += 9;
+            });
+            $('#zero').click(function() {
+                document.forms.display.value += 0;
+            });
+            $('#add').click(function() {
+                document.forms.display.value += '+';
+            });
+            $('#subs').click(function() {
+                document.forms.display.value += '-';
+            });
+            $('#multi').click(function() {
+                document.forms.display.value += '*';
+            });
+            $('#divide').click(function() {
+                document.forms.display.value += '/';
+            });
+            $('#dot').click(function() {
+                document.forms.display.value += '.';
+            });
+            $('#equal').click(function() {
+                if (display.value == "") {
+                    alert("Please enter any numbers to calculate!");
+                } else {
+                    document.forms.display.value =
+                        eval(document.forms.display.value);
+                }
+            });
+            $('#clear').click(function() {
+                document.forms.display.value = "";
+            });
+        })
+    </script>
+</body>
+
+</html>
